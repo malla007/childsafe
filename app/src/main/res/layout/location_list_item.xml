@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/shipping_add_card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirm_order_view1"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="4dp"
+        app:cardBackgroundColor="@color/location_item"
+       >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="10dp"
+        >
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/child_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Charles"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/text_black"
+            />
+        <LinearLayout
+            android:layout_below="@+id/child_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/location" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

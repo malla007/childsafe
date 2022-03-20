@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="15dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Your Loved Ones To Track You"
+            android:textStyle="normal"
+            android:textSize="16sp"
+            android:textColor="@color/text_sub_2"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            />
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardian Email"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:textColor="@color/text_black"
+                />
+            <EditText
+                android:id="@+id/parent_email_edit_dialog"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textSize="16sp"
+                android:ems="10"
+                android:hint="Enter guardian email here"
+                android:background="@drawable/edit_text"
+                android:inputType="text"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+           >
+            <Button
+                android:id="@+id/add_btn_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:text="Add Guardian"
+                android:background="@drawable/button"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                />
+            <Button
+                android:id="@+id/cancel_btn_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="15dp"
+                android:text="Cancel"
+                android:background="@drawable/button"
+                android:backgroundTint="@color/red"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

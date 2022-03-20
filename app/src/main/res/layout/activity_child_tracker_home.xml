@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChildTrackerHome">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/toolbar"
+            android:background="@color/main"
+            android:elevation="4dp"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            >
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:layout_below="@+id/app_bar"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        tools:context=".MapsActivity" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingBottom="30dp"
+        >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:paddingHorizontal="30dp"
+                android:background="@drawable/emergency_btn"
+                android:onClick="onEmergency"
+                android:text="EMERGENCY"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:backgroundTint="@color/red"
+                tools:ignore="OnClick" />
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            />
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/call_btn_background"
+            android:onClick="onCallForEmergency"
+            android:text="EMERGENCY"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            android:src="@drawable/ic_baseline_call_24"
+            android:backgroundTint="@color/call_green"
+            tools:ignore="OnClick" />
+
+    </LinearLayout>
+</RelativeLayout>

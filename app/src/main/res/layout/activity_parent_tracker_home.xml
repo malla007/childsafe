@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ParentTrackerHome"
+        >
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/toolbar"
+                android:background="@color/main"
+                android:elevation="4dp"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                >
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/top_layer"
+            android:layout_below="@+id/app_bar_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/welcome_text_child"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hi Charles!"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="@color/text_black"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="We warmly welcome you to our parent tracking app.You are allowed to live track and get emergency notications to this account. "
+                    android:textStyle="normal"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_sub"
+                    />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/divider_grey" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Live Track your child"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/main"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/location_list"
+            android:layout_below="@+id/top_layer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            tools:listitem="@layout/location_list_item"
+            />
+        <RelativeLayout
+            android:layout_below="@+id/top_layer"
+            android:id="@+id/empty_location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/location_empty" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:elevation="8dp"
+            android:background="@drawable/progress_background">
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="false"
+                android:padding="5dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </RelativeLayout>
